@@ -5,10 +5,10 @@ import 'slick-carousel';
 
 document.addEventListener('DOMContentLoaded', function () {
   // Slider for Yachts Section
-  $('.our-yachts-list').slick({ // our-yachts-list
+  $('.our-yachts-list, .reviews-list').slick({ // our-yachts-list
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3500,
     speed: 1500,
     infinite: true,
@@ -34,11 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // Open Menu
   $('.open-menu-but').on('click', function () {
     $('.header-menu').fadeIn()
+    // $('body').css('overflow', 'hidden')
   })
 
   // Close Menu
   $('.close-menu-but').on('click', function () {
     $('.header-menu').fadeOut()
+    // $('body').css('overflow', 'unset')
   })
 
   // Show Menu on Scroll
@@ -85,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (target.length) {
       event.preventDefault();
 
+      // $('body').css('overflow', 'unset')
+
       $('.header-menu').fadeOut()
       $('html, body').stop().animate({
         scrollTop: target.offset().top
@@ -94,4 +98,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // AOS Init
   AOS.init();
+});
+
+window.addEventListener('load', function() {
+  var preloader = document.querySelector('.preloader');
+  preloader.style.display = 'none';
 });

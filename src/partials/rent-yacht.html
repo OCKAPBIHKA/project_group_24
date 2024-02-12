@@ -10,6 +10,7 @@
             name="user-name"
             id="user-name"
             placeholder="Full Name"
+            required
           />
           <input
             class="input-rent-bloc"
@@ -17,6 +18,7 @@
             name="user-email"
             id="user-email"
             placeholder="Email"
+            required
           />
           <input
             class="input-rent-bloc"
@@ -24,12 +26,14 @@
             name="user-phone"
             id="user-phone"
             placeholder="Phone number"
+            required
           />
           <textarea
             class="comment-rent-bloc"
             name="user-comment"
             id="user-comment"
             placeholder="Comment"
+            required
           ></textarea>
         </div>
         <button type="submit" class="form-button-rent-bloc">Send</button>
@@ -38,31 +42,37 @@
     <div class="picture-wrap">
       <picture data-aos="fade-right">
         <source
+          srcset="./img/rent/rent.jpg 1x, ./img/rent/rent@2x.jpg 2x"
+          media="(min-width: 1440px)"
+        />
+        <source
           srcset="
-            ../img/rent-bloc-img-desk.jpg    1x,
-            ../img/rent-bloc-img-desk-2x.jpg 2x
+            ./img/rent/rent-bloc-img-desk.jpg    1x,
+            ./img/rent/rent-bloc-img-desk-2x.jpg 2x
           "
           media="(min-width: 1280px)"
         />
         <source
           srcset="
-            ../img/rent-bloc-img-tab.jpg    1x,
-            ../img/rent-bloc-img-tab-2x.jpg 2x
+            ./img/rent/rent-bloc-img-tab.jpg    1x,
+            ./img/rent/rent-bloc-img-tab-2x.jpg 2x
           "
           media="(min-width: 768px)"
         />
         <source
           srcset="
-            ../img/rent-bloc-img-mob.jpg    1x,
-            ../img/rent-bloc-img-mob-2x.jpg 2x
+            ./img/rent/rent-bloc-img-mob.jpg    1x,
+            ./img/rent/rent-bloc-img-mob-2x.jpg 2x
           "
           media="(max-width: 767px)"
         />
         <img
           class="rent-bloc-photo"
-          src="../img/rent-bloc-img-mob.jpg"
+          src="./img/rent/rent-bloc-img-mob.jpg"
           alt="yacht"
-          width="704"
+          width="768"
+          height="534"
+          loading="lazy"
         />
       </picture>
     </div>
