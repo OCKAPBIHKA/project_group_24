@@ -2,7 +2,7 @@
   <div class="container change-direction">
     <div class="form-container">
       <h2 class="rent-bloc-title" data-aos="fade-up">Rent a yacht now</h2>
-      <form action="/" data-aos="fade-right">
+      <form action="https://sanetchek.github.io/project_group_24/" data-aos="fade-right">
         <div class="form-rent-bloc-wrap">
           <input
             class="input-rent-bloc"
@@ -10,6 +10,8 @@
             name="user-name"
             id="user-name"
             placeholder="Full Name"
+            pattern="\w{3,16}"
+            title="3 to 16 letters"
             required
           />
           <input
@@ -18,6 +20,8 @@
             name="user-email"
             id="user-email"
             placeholder="Email"
+            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+            title="Example: info@mail.com"
             required
           />
           <input
@@ -26,6 +30,8 @@
             name="user-phone"
             id="user-phone"
             placeholder="Phone number"
+            pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12"
+            title="Example: 067 555 6677"
             required
           />
           <textarea
